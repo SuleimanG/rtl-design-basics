@@ -1,41 +1,64 @@
-# RTL Design Basics (Verilog)
-
-This repository contains implementations of fundamental digital logic components using Verilog, with a focus on Register Transfer Level (RTL) design principles.
+# RTL Design Basics – Verilog and Verification
 
 ## Overview
 
-The goal of this project is to build core digital logic blocks from first principles and organize them using clean, modular RTL design practices.
+This repository contains fundamental RTL designs implemented in Verilog along with their verification using structured testbenches and waveform analysis.
 
+The purpose of this project is to build a strong foundation in digital design and verification methodology.
 
-## Implemented Modules
+---
 
-### Combinational Logic
-- NAND
-- NOT
-- AND
-- OR
-- XOR
-- Multiplexer (MUX)
-- Demultiplexer (DMUX)
+## Design and Verification Workflow
 
-## Design Approach
+Each design in this repository follows the same process:
 
-- Modular Verilog design
-- Hierarchical composition
-- Clear separation of logic
-- Emphasis on readability and correctness
+1. Implement RTL in Verilog
+2. Develop a testbench
+3. Create a reference model for expected behavior
+4. Compare DUT output with expected output (self-checking)
+5. Generate waveform dump
+6. Analyze using GTKWave
 
-## Future Work
+---
 
-- Sequential logic (flip-flops, registers)
-- Finite State Machines (FSM)
-- Timing-aware design
-- Simple CPU components
+## Example: NAND Gate
+
+### RTL Implementation
+
+```verilog id="rtl1"
+assign y = ~(a & b);
+```
+
+### Reference Model
+
+```verilog id="ref1"
+expected_y = ~(a & b);
+```
+
+### Verification Approach
+
+* All input combinations are applied
+* Output is compared against reference model
+* Simulation results are checked automatically
+* Waveforms are inspected for correctness
+
+---
+
 
 ## Tools
-- Verilog HDL
-- Simulation tools (e.g., ModelSim / Vivado)
 
-## Purpose
+* Verilog HDL
+* Icarus Verilog
+* GTKWave
+* Git
 
-This project is part of my journey to build a strong foundation in digital design and RTL development, with the goal of progressing toward VLSI and hardware engineering roles.
+---
+
+## Learning Outcomes
+
+* RTL design using Verilog
+* Writing structured testbenches
+* Building reference models
+* Self-checking verification
+* Waveform-based debugging
+
