@@ -43,8 +43,11 @@ expected_y = ~(a & b);
 * Waveforms are inspected for correctness
 
 ---
+### Waveform
 
+![NAND Gate Waveform](gates/docs/nand_wave.png)
 
+---
 ## Tools
 
 * Verilog HDL
