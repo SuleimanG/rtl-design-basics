@@ -29,7 +29,7 @@ always_ff @(posedge clk or negedge rst_n)
     begin
         if (!rst_n)
             begin
-                N1 <= 1'b0;
+                sync_out <= 1'b0;
             end
         else
             begin
